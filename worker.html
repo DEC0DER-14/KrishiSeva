@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="worker.css">
+    <title>Worker Booking</title>
+</head>
+<body>
+<div class="container">
+    <h1>Book a Worker</h1>
+    <div class="form-group">
+        <label for="worktype">Select Work Type</label>
+        <select id="worktype">
+            <option value="">-- Choose Work Type --</option>
+            <option value="Plowing">Plowing</option>
+            <option value="Sowing">Sowing</option>
+            <option value="Harvesting">Harvesting</option>
+        </select>
+    </div>
+
+    <input type="text" id="location" placeholder="Enter Khasra/DAG no.">
+
+    <div class="form-group">
+        <label for="timeslot">Select Time Slot</label>
+        <select id="timeslot">
+            <option value="">-- Choose Time Slot --</option>
+            <option value="Morning">9:00-10:00</option>
+            <option value="Afternoon">10:00-11:00</option>
+            <option value="Evening">11:00-12:00</option>
+        </select>
+    </div>
+
+    <button class="btn" id="requestWorkerBtn">Request Worker</button>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div class="worker-details" id="workerDetails">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>ID:</strong> 12345</p>
+        <p><strong>Arrival Time:</strong> 10:00 AM</p>
+        <p><strong>Cost:</strong> ₹500</p>
+        <button class="confirm-btn">Confirm Booking</button>
+    </div>
+</div>
+
+<script src="worker.js"></script>
+</body>
+</html>
