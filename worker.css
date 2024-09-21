@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1464972377689-e7674c48d806?q=80&w=2055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Makes the image cover the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensures the background covers full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 600px; /* Increase this value to make the container wider */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+.status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+.worker-details {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.worker-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.confirm-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none; /* Reduce shadow for small devices */
+        border-radius: 0; /* Remove border radius for small devices */
+    }
+    h1 {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    select, .btn, .confirm-btn {
+        padding: 8px;
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    .status, .worker-details p {
+        font-size: 14px; /* Adjust text size */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce body padding for very small screens */
+    }
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+    select, .btn, .confirm-btn {
+        padding: 7px;
+        font-size: 13px; /* Further reduce font size */
+    }
+}
