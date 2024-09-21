@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-image: url(https://images.unsplash.com/photo-1560493676-04071c5f467b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWdyaWN1bHR1cmV8ZW58MHx8MHx8fDA%3D);
+    background-size: cover; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 100px;
+}
+
+.tractor {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image {
+    background-color: #eee;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.id, .name, .location {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.book-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-btn:hover {
+    background-color: #218838;
+}
+
+.booking-section {
+    background-color: #f0f8ff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.booking-section h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.booking-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+ 
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://media.istockphoto.com/id/1484926090/vector/agriculture-farm-fields-aerial-view-background-pattern.jpg?s=612x612&w=0&k=20&c=4tFBQUFdaK_Ko3nfjw8zsN5Wn3Ef28A5NBVScIY-KIw=);
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url(data:image/jpeg;base64,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); background-size: cover;
+}
+
+.image {
+    background-color: #ddd;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+} */
