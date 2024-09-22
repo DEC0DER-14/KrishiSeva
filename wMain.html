@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="wMain.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">KrishiSeva.com</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Name</a></li>
+          <li><a href="#about">ID </a></li>
+          <li><a href="#services">Work Type</a></li>
+          <li><a href="#contact">Profile</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+    <!-- Main Form -->
+    <div class="container">
+        <h2>Employee Information</h2>
+        <form id="employeeForm">
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="office1">Office 1</option>
+                    <option value="office2">Office 2</option>
+                    <option value="remote">Remote</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Availability:</label>
+                <input type="radio" id="availableYes" name="availability" value="yes" required>
+                <label for="availableYes">Yes</label>
+                <input type="radio" id="availableNo" name="availability" value="no" required>
+                <label for="availableNo">No</label>
+            </div>
+            <button type="submit" id="butn">Submit</button>
+        </form>
+    </div>
+
+    <script src="wMain.js"></script>
+</body>
+</html>
